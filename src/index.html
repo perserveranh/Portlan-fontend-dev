@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+         <!-- icon -->
+         <script defer="" src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <title>Hello, world!</title>
+    </head>
+    <body>
+
+       <div class="wallpaper">
+
+        <!-- Modal card test-->
+        <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <table class="table table-bordered" id="table-products">
+                  <thead>
+                      <tr>
+                          <th>Id</th>
+                          <th>Name</th>
+                          <th>Price</th>
+                          <th>Quantity</th>
+                          <th>Total</th>
+                      </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal cart-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"  aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <!-- <span aria-hidden="true">&times;</span> -->
+                </button>
+              </div>
+              <div class="modal-body text-center">
+                  THÊM RỎ HÀNG
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary modal-save" data-dismiss="modal">Yes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Signin -->
+        <div class="modal fade" id="SingIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLabel">SIGN IN</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Name:</label>
+                    <input type="text" class="form-control login__name" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-pass" class="col-form-label">Password:</label>
+                     <input type="text" class="form-control login__pass" id="recipient-pass">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary modal__login" data-dismiss="modal">Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- start header -->
+         <header>
+           <div class="container">
+                <div class="row text-center">
+                     <!-- laptop -->
+                    <div class="d-md-block d-none col-md-12">
+                        <div class="row">
+                            <div class="col-md-2 col-lg-3 padding-site">
+                                <ul class="header__left list-inline">
+                                    <li class="header__leftM__bar list-inline-item"><i class="fas fa-bars cusor"></i></li>
+                                    <li class="header__left_logo list-inline-item"><img src="images/logo.png" alt="logo"></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-7 col-lg-6 padding-site">
+                                <ul class="list-inline header__bet">
+                                    <li class="list-inline-item"><a href="#Home">Home</a></li>
+                                    <li class="list-inline-item"><a href="#Devices">Devices</a></li>
+                                    <li class="list-inline-item"><a href="#myCarousel">Delivery & Payment</a></li>
+                                    <li class="list-inline-item"><a href="#Guarantee">Guarantee</a></li>
+                                    <li class="list-inline-item"><a href="#About">About Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-lg-3 padding-right-0">
+                                <ul class="list-inline ml-auto header__right">
+                                    <li class="list-inline-item  text-uppercase cusor" data-toggle="modal" data-target="#modalCart"><i class="fas fa-shopping-cart"></i> Cart <span class="header__cart">0</span></li>
+                                    <li class="list-inline-item text-uppercase"><button class="bg-white btn-sign cusor" data-toggle="modal" data-target="#SingIn">sign in</button></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-9">
+                                <ul class="titleM__bar1 list-inline font-12 color-b9 text-uppercase">
+                                    <li class="list-inline-item">top sales</li>
+                                    <li class="list-inline-item">brand focus</li>
+                                    <li class="list-inline-item">hi-tech</li>
+                                    <li class="list-inline-item">best-sellers</li>
+                                    <li class="list-inline-item">projects</li>
+                                    <li class="list-inline-item ml-auto">support</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3">
+                                <ul class="list-inline titleM__bar1 font-12">
+                                    <li class="list-inline-item">
+                                       <i class="fas fa-search text-dark"></i>
+                                    </li>
+                                    <li class="list-inline-item bar1__search">
+                                        <input class="border-0" type="text" placeholder="i'm looking for ...">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                <!-- mobile -->
+                    <div class="d-md-none d-block col-sm-12">
+                        <div class="row header__titleM">
+                            <div class="col-6">
+                                <ul class="list-inline header__leftM">
+                                    <li class="list-inline-item header__leftM__bar"><i class="fas fa-bars cusor"></i></li>
+                                    <li class="list-inline-item header__leftM_logo"><img src="images/logo.png" alt="logo"></li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-inline ml-auto header__betM">
+                                    <li class="list-inline-item  text-uppercase cusor" data-toggle="modal" data-target="#modalCart"><i class="fas fa-shopping-cart"></i> Cart <span class="header__cart">0</span></li>
+                                    <li class="list-inline-item text-uppercase"><button type="button" class="bg-white btn-sign cusor" data-toggle="modal" data-target="#SingIn">sign in</button></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-12">
+                                <ul class="titleM__bar1 list-inline font-11 color-b9 text-uppercase">
+                                    <li class="list-inline-item">top sales</li>
+                                    <li class="list-inline-item">brand focus</li>
+                                    <li class="list-inline-item">hi-tech</li>
+                                    <li class="list-inline-item">best-sellers</li>
+                                    <li class="list-inline-item">projects</li>
+                                    <li class="list-inline-item">support</li>
+                                    <li class="list-inline-item bar1__search">
+                                      <i class="fas fa-search text-dark"></i><input class="border-0 bar1__search__input" type="text" placeholder="i'm looking for ...">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-12 header__bottomM">
+                              <ul class="list-inline header__bet">
+                                  <li class="list-inline-item"><a href="#Home">Home</a></li>
+                                  <li class="list-inline-item"><a href="#Devices">Devices</a></li>
+                                  <li class="list-inline-item"><a href="#Delivery">Delivery & Payment</a></li>
+                                  <li class="list-inline-item"><a href="#Guarantee">Guarantee</a></li>
+                                  <li class="list-inline-item"><a href="#About">About Us</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+         </header>
+
+        <!-- start slider -->
+        <div class="slider text-white">
+            <div class="container-fluid">
+              <div class="row">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/slider.png" alt="Los Angeles">
+                    <div class="slider-left carousel-caption text-white d-none d-md-block col-md-4">
+                          <h3 class="font-weight-bold font-42 text-left">iPhone 6 32Gb Black</h3>
+                          <p class="slider__text text-justify d-md-block d-none">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                          <button  class="buy-now cusor add-to-cart border-0 text-white font-weight-bold"  id="product-1" data-name="iPhone 6" data-price="10000000" data-toggle="modal" data-target="#exampleModal">BUY NOW</button>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="images/slider.png" alt="Los Angeles">
+                    <div class="slider-left carousel-caption text-white d-none d-md-block col-md-4">
+                          <h3 class="font-weight-bold font-42 text-justify">iPhone 6 Plus 32Gb Black</h3>
+                          <p class="slider__text text-justify">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                          <button  class="buy-now cusor add-to-cart border-0 text-white font-weight-bold"  id="product-2" data-name="iPhone 6 plus" data-price="11000000" data-toggle="modal" data-target="#exampleModal">BUY NOW</button>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="images/slider.png" alt="Chicago">
+                    <div class="slider-left carousel-caption text-white d-none d-md-block col-md-4">
+                          <h3 class="font-weight-bold font-42 text-justify">iPhone 7 32Gb Black</h3>
+                          <p class="slider__text text-justify">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                          <button  class="buy-now cusor add-to-cart border-0 text-white font-weight-bold"  id="product-3" data-name="iPhone 7" data-price="13000000" data-toggle="modal" data-target="#exampleModal">BUY NOW</button>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- start content -->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <!-- sort -->
+                        <!-- mobile sort-->
+                    <div class="content__sort col-sm-12 bg-white font-11" id="Devices">
+                       <div class="row">
+                            <div class="col-6 col-lg-2 sortBy border-right d-flex align-items-center border-bottom">
+                                <ul class="sort__ul list-inline margin-top-16">
+                                    <li class="color-a1 list-inline-item text-uppercase">sort by</li>
+                                    <li class="list-inline-item">
+                                        <select class="border-0 bg-white">
+                                          <option>BEST MATCH</option>
+                                          <option value="1">One</option>
+                                          <option value="2">Two</option>
+                                          <option value="3">Three</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-3 keyWord color-a1 border-bottom">
+                                 <ul class="sort__ul list-inline margin-top-16">
+                                    <li class="list-inline-item text-uppercase">keywords</li>
+                                    <li class="list-inline-item"><input type="text" class="keyWord__input color-a1 background-f0 border-0" placeholder="Tablet"></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 col-lg-3 price margin-top-16">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-uppercase">price</li>
+                                    <li class="list-inline-item price__min"><input type="text" class="price__min__input background-f0 border-0" placeholder="10"></li>
+                                    <li class="list-inline-item price__max"><input type="text" class="price__max__input background-f0 border-0" placeholder="100"></li>
+                                </ul>
+                            </div>
+                            <div class="col-3 col-lg-2 freeShip margin-top-16"><span class="bg-white color-aa"><i class="fas fa-check-circle"></i></span>     Free Ship</div>
+                            <div class="col-5 col-lg-2 shipTo margin-top-16">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item text-uppercase">ship to</li>
+                                    <li class="list-inline-item text-uppercase">
+                                         <select class="border-0 bg-white">
+                                              <option>USA</option>
+                                              <option value="1">VN</option>
+                                              <option value="2">EN</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+                       </div>
+                    </div>
+
+                    <!-- filter -->
+
+                    <div id="mySidenav" class="sidenav bac  col-lg-3 font-13">
+                      <a href="javascript:void(0)" class="closebtn d-block d-lg-none">&times;</a>
+                       <div class="navbar bg-white mb-5 padding-site border-bottom" id="myNavbar">
+                          <ul class="nav navbar-nav w-100">
+                            <li class="active border-bottom pl-2">
+                              <a class="dropdown-toggle filter__menu" data-toggle="dropdown" href="#">Top-Sales<span class="caret"></span></a>
+                              <ul class="dropdown-menu text-uppercase font-11 border-0 background-f0 padding-left-15">
+                                <li><a href="#" class="color-a1">cell phones</a></li>
+                              </ul>
+                            </li>
+                            <li class="border-bottom pl-2">
+                              <a class="dropdown-toggle filter__menu" data-toggle="dropdown" href="#">Brand Focus<span class="caret"></span></a>
+                              <ul class="dropdown-menu text-uppercase font-11 border-0 padding-left-15">
+                                <li><a href="#" class="color-a1">cell phones</a></li>
+                              </ul>
+                            </li>
+                            <li class="dropdown border-bottom pl-2">
+                              <a class="dropdown-toggle filter__menu" data-toggle="dropdown" href="#">Hi-Tech<span class="caret"></span></a>
+                              <ul class="dropdown-menu text-uppercase font-11 border-0 background-f0">
+                                <li class="border-bottom"><a href="#" class="color-a1 pl-2">cell phones</a></li>
+                                <li class="border-bottom"><a href="#" class="color-a1 pl-2">cameras</a></li>
+                                <li class="border-bottom"><a href="#" class="color-a1 pl-2">computers</a></li>
+                                <li class="border-bottom"><a href="#" class="color-a1 pl-2">tv,audio</a></li>
+                                <li class="border-bottom"><a href="#" class="color-a1 pl-2">video cames</a></li>
+                              </ul>
+                            </li>
+                            <li class="border-bottom pl-2">
+                              <a class="dropdown-toggle filter__menu" data-toggle="dropdown" href="#">Home<span class="caret"></span></a>
+                              <ul class="dropdown-menu text-uppercase font-11 border-0 background-f0 padding-left-15">
+                                <li><a href="#" class="color-a1">cell phones</a></li>
+                              </ul>
+                            </li>
+                            <li class="pl-2">
+                              <a class="dropdown-toggle filter__menu" data-toggle="dropdown" href="#">Sales<span class="caret"></span></a>
+                              <ul class="dropdown-menu text-uppercase font-11 border-0 background-f0 padding-left-15">
+                                <li><a href="#" class="color-a1">cell phones</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="avaliable bg-white mt-5 mb-5" id="myNavbar1">
+                          <p class="text-uppercase border-bottom pl-2 pt-2 pb-2">avalilable</p>
+                          <div class="radio pl-2">
+                            <label><input type="radio" name="optradio">     In Storage</label>
+                          </div>
+                          <div class="radio pl-2">
+                            <label><input type="radio" name="optradio">     In Online-Shop</label>
+                          </div>
+                          <p class="text-uppercase pl-2 border-bottom border-top pt-2 pb-2">brands <span class="text-right">ALL</span></p>
+                            <div class="checkbox pl-2">
+                              <label><input type="checkbox" value="">     Apple</label>
+                            </div>
+                            <div class="checkbox pl-2">
+                              <label><input type="checkbox" value="">     JBL</label>
+                            </div>
+                            <div class="checkbox pl-2">
+                              <label><input type="checkbox" value="">     Bose</label>
+                            </div>
+                            <div class="checkbox pl-2">
+                              <label><input type="checkbox" value="">     Nest</label>
+                            </div>
+                        </div>
+
+                         <div class="bg-white mt-5 mb-5" id="myNavbar2">
+                           <p class="text-uppercase pl-2 border-bottom border-top pt-2 pb-2">condition <span class="text-right">ALL</span></p>
+                            <div class="checkbox pl-2">
+                              <label><input type="checkbox" value="">     New</label>
+                            </div>
+                            <div class="checkbox pl-2">
+                              <label><input type="checkbox" value="">     Manufacturer Refurbished</label>
+                            </div>
+                            <div class="checkbox pl-2">
+                              <label><input type="checkbox" value="">     Seller Refurbished</label>
+                            </div>
+                            <div class="checkbox pl-2">
+                              <label><input type="checkbox" value="">     Used</label>
+                            </div>
+                            <div class="checkbox pl-2">
+                              <label><input type="checkbox" value="">     For Parts or not Working</label>
+                            </div>
+                        </div>
+
+                         <div class="bg-white mt-5" id="myNavbar3">
+                            <p class="text-uppercase pl-2 border-bottom border-top pt-2 pb-2">Delivery Options<span class="text-right">ALL</span></p>
+                            <label class="radio-inline pl-2"><input type="radio" name="optradio">     FREE</label>
+                            <label class="radio-inline text-center"><input type="radio" name="optradio" class="text-center">     $4.99</label>
+                        </div>
+                    </div>
+                    <span class="d-block d-lg-none click-show cusor" id="open">&#9776;</span>
+
+                    <!-- product -->
+                    <div class="content__product col-lg-9 col-sm-12" id="Guarantee">
+                        <div class="row text-center">
+                          <div class="col-lg-4 col-md-6 col-sm-12 position-relative product-box">
+                             <img src="images/appletv.jpg" alt="tv" class="add-to-cart cusor"  id="product-4" data-name="Apple TV 32 GB" data-price="12000000" data-toggle="modal" data-target="#exampleModal">
+                              <div class="product__text position-absolute">
+                                <h3>Apple TV 32 GB</h3>
+                                <p class="color-b8 text-uppercase"> Black</p>
+                                <p>$29.99</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6 col-sm-12 position-relative product-box">
+                             <img src="images/redwatch.jpg" alt="tv"  class="add-to-cart cusor" id="product-5" data-name="Pebble Time" data-price="6900000" data-toggle="modal" data-target="#exampleModal">
+                              <div class="product__text position-absolute">
+                                <h3>Pebble Time</h3>
+                                <p class="color-b8 text-uppercase"> Red</p>
+                                <p>$29.99</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6 col-sm-12 position-relative product-box">
+                             <img src="images/port.jpg" alt="tv"  class="add-to-cart cusor" id="product-6" data-name="Zendure 4-Port USB" data-price="100000" data-toggle="modal" data-target="#exampleModal">
+                              <div class="product__text position-absolute">
+                                <h3>Zendure 4-Port USB</h3>
+                                <p class="color-b8 text-uppercase"> White</p>
+                                <p>$49.99</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6 col-sm-12 position-relative product-box">
+                            <img src="images/des.jpg" alt="tv"  class="add-to-cart cusor" id="product-7" data-name="Withings Smart Body Analyzer ws-50" data-price="10000000" data-toggle="modal" data-target="#exampleModal">
+                              <div class="product__text position-absolute">
+                                <h3>Withings Smart Body Analyzer ws-50</h3>
+                                <p class="color-b8 text-uppercase"> White</p>
+                                <p>$49.99</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-8 position-relative product-box">
+                            <img src="images/loaubl.jpg" alt="tv"  class="add-to-cart cusor" id="product-8" data-name="JBL Chanrge 2+" data-price="17000000" data-toggle="modal" data-target="#exampleModal">
+                             <div class="product__loa position-absolute">
+                                <h3>JBL Chanrge 2+</h3>
+                                <p class="color-b8 text-uppercase"> White</p>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6 col-sm-12 position-relative product-box">
+                            <img src="images/mayanh.jpg" alt="tv"  class="add-to-cart cusor" id="product-9" data-name="Ollo Clip New" data-price="3800000" data-toggle="modal" data-target="#exampleModal">
+                              <div class="product__text position-absolute">
+                                <h3>Ollo Clip New</h3>
+                                <p class="color-b8 text-uppercase"> SLIVER</p>
+                                <p>$19.99</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6 col-sm-12 position-relative product-box">
+                            <img src="images/dongho.jpg" alt="tv"  class="add-to-cart cusor" id="product-10" data-name="Fitbit Charge HR Heart Rate and Activity Tracker" data-price="7000000" data-toggle="modal" data-target="#exampleModal">
+                              <div class="product__text position-absolute">
+                                <h3>Fitbit Charge HR Heart Rate and Activity Tracker</h3>
+                                <p class="color-b8 text-uppercase"> Black</p>
+                                <p>$19.99</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6 col-sm-12 position-relative product-box">
+                            <img src="images/whitewatch.jpg" alt="tv"  class="add-to-cart cusor" id="product-11" data-name="Apple Watch Sport 38mm Silver Aluminum Case" data-price="13000000" data-toggle="modal" data-target="#exampleModal">
+                              <div class="product__text position-absolute">
+                                <h3>Apple Watch Sport 38mm Silver Aluminum Case</h3>
+                                <p class="color-b8 text-uppercase"> white</p>
+                                <p>$49.99</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6 col-sm-12 position-relative product-box">
+                            <img src="images/headphone.jpg" alt="tv"  class="add-to-cart cusor" id="product-12" data-name="Bose SoundLink On-Ear Headphones" data-price="1800000" data-toggle="modal" data-target="#exampleModal">
+                              <div class="product__text position-absolute">
+                                <h3>Bose SoundLink On-Ear Headphones</h3>
+                                <p class="color-b8 text-uppercase"> White</p>
+                                <p>$119.99</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6 col-sm-12 position-relative product-box">
+                            <img src="images/speaker.jpg" alt="tv"  class="add-to-cart cusor" id="product-13" data-name="Sonos Play-1 Wireless HiFi System" data-price="12000000" data-toggle="modal" data-target="#exampleModal">
+                              <div class="product__text position-absolute">
+                                <h3>Sonos Play-1 Wireless HiFi System</h3>
+                                <p class="color-b8 text-uppercase"> Black</p>
+                                <p>$99.99</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6 col-sm-12 position-relative product-box">
+                            <img src="images/do.jpg" alt="tv"  class="add-to-cart cusor" id="product-14" data-name="Nest Learning Thermostat, 3rd Generation" data-price="1700000" data-toggle="modal" data-target="#exampleModal">
+                              <div class="product__text product__text__end position-absolute">
+                                <h3>Nest Learning Thermostat, 3rd Generation</h3>
+                                <p>$49.99</p>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <!-- page -->
+                    <div class="content__page col-sm-12 bg-white">
+                      <nav aria-label="Page navigation example">
+                        <ul class="pagination mx-auto d-flex justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                          <li class="page-item"><a class="page-link" href="#">5</a></li>
+                          <li class="page-item"><a class="page-link" href="#">6</a></li>
+                          <li class="page-item"><a class="page-link" href="#">7</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+
+                    <!-- best -->
+                    <div class="content__best col-sm-12">
+                        <div class="container">
+                          <div class="row row-eq-height bg-white">
+                               <div class="col-sm-12 best__header text-uppercase border-bottom text-center pt-3 pb-3">
+                                best sellers
+                              </div>
+                              <div class="card col-lg-3 col-sm-6 col-12">
+                                <img class="card-img-top best-mu cusor add-to-cart" src="images/mu.jpg" alt="Card image cap"  id="product-15" data-name="Beanie" data-price="90000" data-toggle="modal" data-target="#exampleModal">
+                                <div class="card-body text-center best-textMu">
+                                  <p>Beanie</p>
+                                  <p class="color-a1">CREEN</p>
+                                  <p><del>$39.99</del><span>        $29.99</span></p>
+                                </div>
+                              </div>
+                              <div class="card col-lg-3 col-sm-6 col-12">
+                                <img class="card-img-top  cuso add-to-cartr" src="images/aococ.jpg" alt="Card image cap"  id="product-16" data-name="T-Shirt With  a Print" data-price="120000" data-toggle="modal" data-target="#exampleModal">
+                                <div class="card-body text-center">
+                                  <p>T-Shirt With  a Print</p>
+                                  <p class="color-a1">DARK BLUE</p>
+                                  <p><del>$29.99</del><span>        $19.99</span></p>
+                                </div>
+                              </div>
+                              <div class="card col-lg-3 col-sm-6 col-12">
+                                <img class="card-img-top  cusor add-to-cart" src="images/aophao.jpg" alt="Card image cap"  id="product-17" data-name="Pile-Lined Hooded Jacket" data-price="170000" data-toggle="modal" data-target="#exampleModal">
+                                 <div class="card-body text-center">
+                                  <p>Pile-Lined Hooded Jacket</p>
+                                  <p class="color-a1">DARK BLUE</p>
+                                  <p><del>$49.99</del><span>        $39.99</span></p>
+                                </div>
+                              </div>
+                              <div class="card col-lg-3 col-sm-6 col-12">
+                                <img class="card-img-top cusor  add-to-cart" src="images/giay.jpg" alt="Card image cap"  id="product-18" data-name="Trainers" data-price="1500000" data-toggle="modal" data-target="#exampleModal">
+                                <div class="card-body text-center">
+                                  <p>Trainers</p>
+                                  <p class="color-a1">SPACE CREV</p>
+                                  <p><del>$39.99</del><span>        $29.99</span></p>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+ <!-- Modal -->
+        <div class="modal fade" id="detail-modal" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="detail-modal-header"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="detail-modal-body">
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- start testimo -->
+        <div class="testimo" id="About">
+            <div class="container">
+                <div class="row bg-white">
+                    <div class="testimo__header text-center col-sm-12 ">
+                      <h2 class="font-weight-bold">What Our Custumers Have to Say</h2>
+                      <p class="font-italic color-a1">Couple of Words About This Stories Section</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12 testimo__customer">
+                      <div class="card border-0">
+                        <div class="media">
+                          <img class="mr-3" src="images/avatar1.png" alt="Generic placeholder image">
+                          <div class="media-body">
+                            <h5 class="mt-0">Celia Fields</h5>
+                            <p class="font-italic color-a1">UX Expext</p>
+                          </div>
+                        </div>
+                        <div class="card-body padding-site">
+                          <p class="card-text">This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning upon such abstruse matters.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 testimo__customer">
+                      <div class="card border-0">
+                        <div class="media">
+                          <img class="mr-3" src="images/avatar2.png" alt="Generic placeholder image">
+                          <div class="media-body">
+                            <h5 class="mt-0">Alexander Lee</h5>
+                            <p class="font-italic color-a1">Foundes</p>
+                          </div>
+                        </div>
+                        <div class="card-body padding-site">
+                          <p class="card-text">Looking cautiously round, to ascertain that they were not overheard, the two hags cowered nearer to the fire, and chuckled heartily.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 testimo__customer">
+                      <div class="card border-0">
+                        <div class="media">
+                          <img class="mr-3" src="images/avater3.png" alt="Generic placeholder image">
+                          <div class="media-body">
+                            <h5 class="mt-0">Lenora Sandoval</h5>
+                            <p class="font-italic color-a1">Lenora Sandoval </p>
+                          </div>
+                        </div>
+                        <div class="card-body padding-site">
+                          <p class="card-text">This sounded a very good reason, and Alice was quite pleased to know it. 'I never thought of that before!' she said.</p>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- start footer -->
+        <footer class="bg-dark" id="Contact">
+            <div class="container">
+              <div class="row">
+                  <div class="col-6 col-sm-2 border-bottom footer__img "><img src="images/logo_1.png" alt="logo" class="padding-left-15"></div>
+                  <div class=" col-sm-8 d-none d-sm-block border-bottom footer__menu text-center">
+                     <ul class="list-inline footer-menu text-uppercase text-white font-weight-bold">
+                        <li class="list-inline-item"><a href="#Home">Home</a></li>
+                        <li class="list-inline-item"><a href="#Shop">Shop</a></li>
+                        <li class="list-inline-item"><a href="#Team">Team</a></li>
+                        <li class="list-inline-item"><a href="#About">About Us</a></li>
+                        <li class="list-inline-item"><a href="#Contact">Contact</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-6 col-sm-2 border-bottom footer__icon">
+                     <i class="fab fa-twitter text-white"></i>
+                     <i class="fab fa-facebook-f text-white"></i>
+                     <i class="fab fa-google-plus-g text-white"></i>
+                  </div>
+                 <div class="col-12 col-sm-6 font-14 color-a1 footer__text">
+                    She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday.
+                 </div>
+                 <div class="col-6 col-sm-3 text-uppercase font-11 color-a1 footer_pri">Privacy Policy</div>
+                 <div class="col-6 col-sm-3 text-uppercase font-11 color-a1 footer_pri">Terms and Conditions</div>
+              </div>
+            </div>
+        </footer>
+
+      </div>
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/libs/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/libs/popper.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/libs/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+        <!-- Optional JavaScript -->
+        <script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>

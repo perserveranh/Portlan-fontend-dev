@@ -1,0 +1,415 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.wallpaper{
+  font-family: "Myriad Pro";
+    font-size: 16px;
+    color:black;
+}
+.color-5c{
+    color:#343e5c;
+}
+.color-b9{
+    color:#b9bed1;
+}
+.color-b8{
+    color:#b8bfd3b8;
+}
+.color-a1{
+    color:#a1a8bd;
+}
+.color-aa{
+    color:#00e2aa;
+}
+.background-f0{
+    background-color: #f0f2f7;
+}
+.background-aa{
+    background-color: #00e2aa;
+}
+.font-11{
+    font-size: 11px;
+}
+.font-12{
+    font-size: 12px;
+}
+.font-13{
+    font-size: 13px;
+}
+.font-14{
+    font-size: 14px;
+}
+.font-42{
+    font-size:42px;
+}
+.padding-site{
+    padding-left: 0;
+    padding-right: 0;
+}
+.padding-left-15{
+    padding-left: 15px;
+}
+.padding-right-0{
+    padding-right: 0px;
+}
+.margin-top-16{
+    margin-top: 16px;
+}
+.cusor:hover{
+    cursor:pointer;
+}
+
+/*header*/
+.header__left,.header__right{
+    padding-top: 30px;
+}
+.header__bet{
+    padding-top: 35px;
+}
+.header__bet>li>a{
+    color:black;
+    text-decoration: none;
+}
+.header__cart{
+    padding:3px 4px;
+    border-radius: 50%;
+    background-color:#e3e8f0;
+}
+.bar1__search{
+    width:20%;
+}
+.bar1__search__input{
+    width: 75%;
+}
+.btn-sign{
+    padding:4px 10px;
+    border:1px solid #dee2e6;
+    border-radius: 10px;
+}
+
+/*slider*/
+.slider-left{
+     margin-bottom:5%;
+}
+.carousel-item img{
+    max-width: 100%;
+}
+.buy-now{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    background-color: #2754eb;
+    padding:17px 50px;
+    border-radius: 20px;
+}
+
+/*contet*/
+.content{
+    background-color: #e4e5e7;
+    padding-bottom: 50px;
+}
+/*content__sort*/
+.content__sort{
+    margin: 50px 0 30px 0;
+}
+.keyWord__input{
+    height:20px;
+    border-radius: 20px;
+}
+.price__min{
+    width: 25%;
+}
+.price__max{
+    width: 35%;
+}
+.price__min__input, .price__max__input{
+    width: 100%;
+    height:20px;
+    border-radius: 20px;
+}
+
+/*filter*/
+#mySidenav a{
+    text-decoration: none;
+}
+.navbar>ul>li{
+    line-height: 40px !important;
+}
+.filter__menu{
+    color: black;
+}
+/*content__product*/
+.content__product img{
+    max-width: 100%;
+}
+#mySidenav{
+     background-color: #e4e5e7;
+     padding-left: 0;
+     font-size: 16px;
+}
+.content__product h3{
+    font-size: 16px;
+}
+.product-box{
+    margin-bottom: 30px;
+}
+.product__text{
+    z-index: 2;
+    top: 65%;
+    line-height: 10px;
+    left: 25%;
+    text-align: center;
+}
+.product__loa{
+   top: 85%;
+   left: 15%;
+}
+.product__text__end{
+    top:10% !important;
+}
+
+/*pagination*/
+.content__page{
+    padding-top:16px;
+}
+.pagination>li>a{
+    border:none;
+}
+
+/*content__best*/
+.content__best{
+    margin-top:50px;
+}
+.best-mu{
+    margin-top:30%;
+}
+.best-textMu{
+    margin-top:20%;
+}
+
+/*testimo*/
+.testimo{
+    padding-top: 75px;
+}
+.testimo__header{
+    padding-bottom: 50px;
+}
+.testimo__customer{
+    padding-bottom: 90px;
+}
+/*footer*/
+.footer__img{
+    padding:60px 0;
+}
+.footer__menu{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.footer-menu>li>a{
+    text-decoration: none;
+    color:white;
+}
+.footer__icon{
+    padding: 65px 0;
+}
+.footer__text{
+    padding-top: 55px;
+    padding-bottom: 60px;
+}
+.footer_pri{
+    padding: 70px 0;
+}
+
+@media screen and (min-width: 320px){
+    /*header*/
+    .header__leftM, .header__betM{
+        padding-top: 20px
+    }
+    .header__betM{
+        font-size: 11px !important;
+    }
+    /*content*/
+    .product__text{
+        left: 30vw;
+        right: 30vw;
+    }
+    /*testimo*/
+    .testimo{
+        padding-top: 25px;
+    }
+    .testimo__header{
+        padding-bottom: 20px;
+    }
+    .testimo__customer{
+        padding-bottom: 30px;
+    }
+    /*footer*/
+    .footer__menu{
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+    .footer-menu>li{
+        font-size: 12px;
+    }
+    .footer__img{
+        padding:30px 0;
+        text-align: center;
+    }
+    .footer__icon{
+        padding: 35px 0;
+        text-align: center;
+    }
+    .footer__text{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    .footer_pri{
+        text-align: center;
+        padding: 20px 0;
+        margin:auto 0;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px){
+    .header__bet{
+        padding-top: 10px;
+    }
+    .price__max{
+        display: block;
+        margin:5px 0 0 42px;
+    }
+    .product__loa{
+        left: 32%;
+        font-size: 10px;
+        line-height: 0px;
+        top: 82%;
+    }
+    /*testimo*/
+    .testimo{
+         padding-top: 20px;
+    }
+    .testimo__header h2{
+        font-size: 25px !important;
+    }
+}
+
+@media screen and (max-width:767px){
+    .header__bet{
+        padding-top: 0;
+    }
+    .header__leftM{
+        text-align:left;
+    }
+}
+
+@media screen and (min-width: 768px){
+    /*slider*/
+    .slider-left h3{
+        font-size: 35px !important;
+    }
+    .slider__text,.buy-now{
+        font-size:11px;
+    }
+    .buy-now{
+        padding:17px 40px;
+    }
+    /*content*/
+    .product__text{
+        left: 10vw;
+        right: 10vw;
+    }
+    .product__loa{
+        left: 42%;
+    }
+    /*footer*/
+    .footer-menu>li{
+        font-size: 12px;
+    }
+    .footer__img{
+    padding:30px 0;
+    }
+    .footer__menu{
+        padding: 30px 0;
+    }
+    .footer__icon{
+        padding: 35px 0;
+    }
+    .footer__text{
+        padding-top: 25px 0;
+    }
+}
+
+@media screen and (max-width: 991px){
+    .sidenav {
+    height: 400px;
+    width: 0;
+    /*position: fixed;*/
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    }
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        margin-left: 50px;
+        font-size: 25px;
+    }
+    #mySidenav{
+        padding-left: 0;
+        padding-right: 0;
+        position: fixed;
+        top: 20%;
+        z-index: 3;
+        opacity: 0.95;
+        /*left: 20%;*/
+    }
+    .click-show{
+        position: fixed;
+        z-index: 2;
+        top: 20%;
+        font-size:25px;
+        cursor: pointer;
+    }
+    #myNavbar{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    /*content*/
+    .product__text{
+       left: 2vw;
+        right: 2vw;
+        top: 65%;
+        line-height: 10px;
+    }
+    .product__loa{
+        left: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
